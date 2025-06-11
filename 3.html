@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>你愿意接受我的爱嘛？</title>
+  <link rel="icon" type="image/gif" href="hug.gif">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFE4E1; /* 浅粉色背景 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    #mainImage {
+      max-width: 200px; /* 设置图片最大宽度，可根据实际图片大小调整 */
+      max-height: 200px; /* 设置图片最大高度，可根据实际图片大小调整 */
+    }
+
+    h1 {
+      color: #8B4513; /* 棕色文字 */
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background-color: #FA8072; /* 浅珊瑚色按钮 */
+      color: white;
+    }
+
+    #no {
+      background-color: #4682B4; /* 钢蓝色按钮 */
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img id="mainImage" src="heart.gif" alt="笔芯~">
+    <h1 id="question">你愿意接受我的爱嘛？</h1>
+    <div class="buttons">
+      <button id="yes">愿意</button>
+      <button id="no">不要</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('yes').addEventListener('click', function () {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = 'hug.gif';
+        mainImage.alt = '拥抱~'; // 同时修改替代文本
+        document.getElementById('question').textContent = '我就知道你愿意~';
+      });
+
+      document.getElementById('no').addEventListener('click', function () {
+        window.location.href = 'https://www.12306.cn/index/';
+      });
+    });
+  </script>
+</body>
+
+</html>
